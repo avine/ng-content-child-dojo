@@ -15,3 +15,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+button {
+  margin-right: 0.5em;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.5em;
+}

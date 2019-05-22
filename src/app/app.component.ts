@@ -24,9 +24,10 @@ import { Component } from '@angular/core';
       background-color: white;
       padding: 1rem; border-radius: 3px; }
     .menu {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
       box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid #ddd;
-      padding-bottom: 1rem;
       line-height: 1.5em }
     .link {
       display: inline-block;
