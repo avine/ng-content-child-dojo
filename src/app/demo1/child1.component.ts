@@ -1,17 +1,18 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
   template: `
     <p>child: {{ text }}</p>
-    <button (click)="doNothing()">Do nothing...</button>
+    <button (click)="triggerViewRender()">Trigger View Render...</button>
   `,
   styles: [],
-  // Notice: the text will NOT be updated unless you click on the button...
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  // Notice: the text will NOT be updated from the parent component,
+  // unless you click on the button in this child component to trigger the re-render of the view...
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Child1Component implements OnInit {
-  text = 'Hello';
+  @Input() text = 'Hello';
 
   constructor() { }
 
@@ -22,7 +23,7 @@ export class Child1Component implements OnInit {
     this.text = text;
   }
 
-  doNothing() {
+  triggerViewRender() {
 
   }
 }

@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-demo2',
   template: `
-    <p>
-      demo2 works!
-    </p>
+    <app-parent2>
+      <app-child2></app-child2>
+    </app-parent2>
   `,
   styles: []
 })
